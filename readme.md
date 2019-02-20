@@ -33,11 +33,26 @@ Polymorphism allows code to be both dry and scaleable which is best practice for
 COMPOSITION
 WHAT DO WE MEAN BY 'COMPOSITION' IN REFERENCE TO OBJECT-ORIENTED PROGRAMMING?
 
+Composition refers to 'HAS A' principle of classes rather than looking at a class in terms of 'IS A'. i.e. a class is composed of elements such as a hotel is composed of rooms, or a car is composed of an engine.
 
+Composition allows a class to use a behaviour common to other classes.
 
 
 WHEN WOULD YOU USE COMPOSITION? PROVIDE A SIMPLE EXAMPLE IN JAVA.
 
+Often inheritance does not scale well and gets messy, thus using composition tools such as interfaces will assist.
+
+Setting up an inheritance will mean that multiple classes can access the same behaviour. An example would be a wizard with several 'IFlyable' objects such
+as a magic carpet, broomstick or dragon. Each of the objects would get the 'fly' behaviour from interface 'IFlyable' although they would otherwise be
+different.
+
 WHAT IS/ARE THE ADVANTAGE(S) OF USING COMPOSITION?
+Classes can implement multiple interfaces whereas they can only extend one inheritance
+Code becomes dry and scalable as the behaviour can be used across multiple classes that are otherwise different
+We can swap in and out these behaviours at run time
+Using an abstraction which low level modules can implement makes the code extendable.
 
 WHAT HAPPENS TO THE BEHAVIOURS WHEN THE OBJECT COMPOSED OF THEM IS DESTROYED?
+If a low level object is destroyed, it will make no difference to the behaviours. There may be other objects that use
+the same behaviours and these would not be impacted.
+There would however be an issue if the behaviour itself was deleted.
