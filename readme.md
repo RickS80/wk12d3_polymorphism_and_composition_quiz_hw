@@ -6,7 +6,7 @@ Polymorphism comes from the ancient Greek words 'poly' and 'morphe' meaning many
 WHAT DOES IT MEAN WHEN WE APPLY POLYMORPHISM TO OO DESIGN? GIVE A SIMPLE JAVA EXAMPLE.
 
 Polymorphism means that we can put several objects into an enclosing type that defines a contract between them all. This can be done in Java by using
-abstract classes and/or inheritances.
+(abstract) classes and/or interfaces.
 
 An abstract class act as a super-class which sub-classes can inherit from.
 
@@ -55,4 +55,4 @@ Using an abstraction which low level modules can implement makes the code extend
 WHAT HAPPENS TO THE BEHAVIOURS WHEN THE OBJECT COMPOSED OF THEM IS DESTROYED?
 If a low level object is destroyed, it will make no difference to the behaviours. There may be other objects that use
 the same behaviours and these would not be impacted.
-There would however be an issue if the behaviour itself was deleted.
+There would however be an issue if the behaviour itself was deleted. The object would be destroyed.
